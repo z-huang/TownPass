@@ -60,5 +60,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>com.apple.developer.nfc.readersession.formats</key>
+    <array>
+        <string>NDEF</string>
+    </array>
+    <key>NFCReaderUsageDescription</key>
+    <string>此應用程式需要使用 NFC 功能來讀取標籤。</string>
 </dict>
 </plist>

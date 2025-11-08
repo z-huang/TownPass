@@ -26,6 +26,8 @@ import 'package:town_pass/page/online_police/online_police_view.dart';
 import 'package:town_pass/page/phone_call_user_agreement/phone_call_user_agreement_view.dart';
 import 'package:town_pass/page/phone_call_user_agreement/phone_call_user_agreement_view_controller.dart';
 import 'package:town_pass/page/portfolioAndAuth/portfolio_auth_view.dart';
+import 'package:town_pass/page/nfc_scan/nfc_scan_controller.dart';
+import 'package:town_pass/page/nfc_scan/nfc_scan_view.dart';
 import 'package:town_pass/page/qr_code_scan/qr_code_scan_controller.dart';
 import 'package:town_pass/page/qr_code_scan/qr_code_scan_view.dart';
 import 'package:town_pass/page/setting/setting_view.dart';
@@ -52,6 +54,7 @@ abstract class TPRoute {
   static const String phoneCallUserAgreement = '/phone_call_user_agreement';
   static const String portfolioAndAuth = '/portfolio_and_auth';
   static const String qrCodeScan = '/qr_code_scan';
+  static const String nfcScan = '/nfc_scan';
   static const String service = '/service';
   static const String serviceEdit = '/service_edit';
   static const String setting = '/setting';
@@ -139,6 +142,13 @@ abstract class TPRoute {
       page: () => const QRCodeScanView(),
       binding: BindingsBuilder(() {
         Get.put<QRCodeScanController>(QRCodeScanController());
+      }),
+    ),
+    GetPage(
+      name: nfcScan,
+      page: () => const NFCScanView(),
+      binding: BindingsBuilder(() {
+        Get.put<NFCScanController>(NFCScanController());
       }),
     ),
     GetPage(

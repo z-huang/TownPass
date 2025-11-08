@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "29240200489",
+    "project_id": "codefest-2025-5e045",
+    "storage_bucket": "codefest-2025-5e045.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29240200489:android:1b8e0699d281b1a6747b38",
+        "android_client_info": {
+          "package_name": "com.example.townpass"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBW0iUuPI0-5lCvZdxbZ8VSDC4Nu1A_T4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

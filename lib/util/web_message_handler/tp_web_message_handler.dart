@@ -281,3 +281,21 @@ class QRCodeScanMessageHandler extends TPWebMessageHandler {
     );
   }
 }
+
+class NFCScanMessageHandler extends TPWebMessageHandler {
+  @override
+  String get name => 'nfc_scan';
+
+  @override
+  Future<void> handle({
+    required Object? message,
+    required WebUri? sourceOrigin,
+    required bool isMainFrame,
+    required onReply,
+  }) async {
+    final result = await Get.toNamed(TPRoute.nfcScan);
+    onReply?.call(
+      replyWebMessage(data: result),
+    );
+  }
+}
