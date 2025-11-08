@@ -282,6 +282,24 @@ class QRCodeScanMessageHandler extends TPWebMessageHandler {
   }
 }
 
+class BusQRCodeScanMessageHandler extends TPWebMessageHandler {
+  @override
+  String get name => 'bus_qr_code_scan';
+
+  @override
+  Future<void> handle({
+    required Object? message,
+    required WebUri? sourceOrigin,
+    required bool isMainFrame,
+    required onReply,
+  }) async {
+    final result = await Get.toNamed(TPRoute.busQrCodeScan);
+    onReply?.call(
+      replyWebMessage(data: result),
+    );
+  }
+}
+
 class NFCScanMessageHandler extends TPWebMessageHandler {
   @override
   String get name => 'nfc_scan';

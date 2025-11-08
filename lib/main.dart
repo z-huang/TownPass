@@ -13,6 +13,7 @@ import 'package:town_pass/util/tp_colors.dart';
 import 'package:town_pass/util/tp_route.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 const _transparentStatusBar = SystemUiOverlayStyle(
   statusBarColor: Colors.transparent,
@@ -20,6 +21,8 @@ const _transparentStatusBar = SystemUiOverlayStyle(
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Permission.camera.request();
+  await Permission.microphone.request();
   await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
   );

@@ -99,6 +99,9 @@ class TPWebView extends StatelessWidget {
           return GeolocationPermissionShowPromptResponse(origin: origin, allow: true, retain: true);
         },
         onCloseWindow: (_) => Get.back(),
+        onPermissionRequest: (controller, request) async {
+          return PermissionResponse(resources: request.resources, action: PermissionResponseAction.GRANT);
+        },
       ),
     );
   }

@@ -26,8 +26,15 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+    <key>NSMicrophoneUsageDescription</key>
+	<string>Flutter requires access to microphone.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This app needs camera access to scan QR codes</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+    <key>NSAllowsArbitraryLoadsInWebContent</key>
+    <true/>
+    </dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>TownPass 需要定位權限才可正常使用</string>
 	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
