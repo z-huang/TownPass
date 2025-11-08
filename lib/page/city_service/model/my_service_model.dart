@@ -190,14 +190,14 @@ extension MyServiceIdExt on MyServiceItemId {
           description: '預約上車、提醒下車',
           icon: Assets.image.passenger.image(),
           category: MyServiceCategory.cityLife,
-          destinationUrl: 'https://codefest.mslab.csie.ntu.edu.tw/',
+          destinationUrl: 'https://codefest.mslab.csie.ntu.edu.tw/passenger/',
         ),
       MyServiceItemId.busDriverService => MyServiceItem(
           title: '公車駕駛服務',
           description: '提供公車司機提醒下一站有乘客要上下車',
           icon: Assets.image.driver.image(),
           category: MyServiceCategory.cityLife,
-          destinationUrl: 'https://codefest.mslab.csie.ntu.edu.tw/',
+          destinationUrl: 'https://codefest.mslab.csie.ntu.edu.tw/driver/',
         ),
     };
   }
