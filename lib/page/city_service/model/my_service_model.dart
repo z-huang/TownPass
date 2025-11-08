@@ -29,6 +29,8 @@ enum MyServiceItemId {
   library,
   locationSearch,
   zoo,
+  busPassengerService,
+  busDriverService,
   ;
 }
 
@@ -181,6 +183,20 @@ extension MyServiceIdExt on MyServiceItemId {
           description: '動物園區資訊導覽、線上地圖',
           icon: Assets.svg.iconZoo24.svg(),
           category: MyServiceCategory.explore,
+          destinationUrl: '',
+        ),
+      MyServiceItemId.busPassengerService => MyServiceItem(
+          title: '公車乘客服務',
+          description: '預約上車、提醒下車',
+          icon: Assets.image.passenger.image(),
+          category: MyServiceCategory.cityLife,
+          destinationUrl: '',
+        ),
+      MyServiceItemId.busDriverService => MyServiceItem(
+          title: '公車駕駛服務',
+          description: '提供公車司機提醒下一站有乘客要上下車',
+          icon: Assets.image.driver.image(),
+          category: MyServiceCategory.cityLife,
           destinationUrl: '',
         ),
     };
